@@ -1,0 +1,25 @@
+id: onetimetask
+key: MT::Plugin::OneTimeTask
+name: OneTimeTask
+version: 0.1
+description: <MT_TRANS phrase='description of OneTimeTask'>
+author_name: Alliance Port, LLC
+author_link: http://www.allianceport.jp/
+l10n_class: OneTimeTask::L10N
+config_template: config_template.tmpl
+# blog_config_template: blog_config_template.tmpl
+# system_config_template: system_config_template.tmpl
+settings:
+    one_time_task_enable:
+        default: 0
+    one_time_task_cron_enable:
+        default: 0
+    one_time_task_starttime:
+        default: 00:01
+    one_time_task_lastdate:
+        default: 0
+tasks:
+    OneTimeTask:
+        label: OneTimeTask
+        frequency: 3600 # no more than every 1 hours
+        code: $OneTimeTask::OneTimeTask::Plugin::do_one_time_task

@@ -1,0 +1,25 @@
+<mtapp:setting
+    id="one_time_task_enable"
+    label="<__trans phrase="Enable:">">
+    <p><input type="checkbox" value="1" name="one_time_task_enable" id="one_time_task_enable"<mt:if name="one_time_task_enable"> checked="checked"</mt:if> class="cb"/> <label for="one_time_task_enable"><__trans phrase="Enable this plugin in this blog"></label></p>
+</mtapp:setting>
+
+<mtapp:setting
+    id="one_time_task_cron_enable"
+    label="<__trans phrase="Cron Enable:">">
+    <p><input type="checkbox" value="1" name="one_time_task_cron_enable" id="one_time_task_cron_enable"<mt:if name="one_time_task_cron_enable"> checked="checked"</mt:if> class="cb"/> <label for="one_time_task_cron_enable"><__trans phrase="Enable this plugin as using cron"></label></p>
+</mtapp:setting>
+
+<mtapp:setting
+    id="one_time_task_starttime"
+    label="<__trans phrase="Start time:">"
+    hint="<__trans phrase="Hint">">
+    <input type="text" name="one_time_task_starttime" id="one_time_task_starttime" value="<mt:var name="get_android_app_info_starttime" escape="html">" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="one_time_task_lastdate"
+    label="<__trans phrase="last date:">"
+    hint="<__trans phrase="Hint">">
+    <input type="text" name="one_time_task_lastdate" id="one_time_task_lastdate" value="<mt:var name="get_android_app_info_lastdate" escape="html">" />
+</mtapp:setting>
